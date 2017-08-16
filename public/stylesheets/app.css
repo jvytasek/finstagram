@@ -28,3 +28,8 @@ main {
 h2:hover{
     background-color: yellow
 }
+
+.photo:hover{
+    box-shadow: 10px 10px grey
+}
+    
