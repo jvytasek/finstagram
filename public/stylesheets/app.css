@@ -1,0 +1,30 @@
+header {
+    background-color: #244751;
+    color: #E8FDFF;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+main {
+    background-color: white;
+    padding: 16px;
+}
+
+.post {
+    margin-bottom: 48px;
+}
+
+.post .user-info img {
+    border-radius:50%;
+}
+
+h2:hover{
+    background-color: yellow
+}
