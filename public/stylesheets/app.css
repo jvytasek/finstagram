@@ -3,9 +3,9 @@ header {
     color: #E8FDFF;
     font-family: 'Just Another Hand', cursive;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     width: 100%;
-    display: block;
+    display: flex;
 }
 
 body{

@@ -10,7 +10,8 @@ body, input {
 
 a {
   color: #8da7b8;
-  text-decoration: none;
+  text-decoration: underline;
+  text-align: right;
 }
 
 label {
