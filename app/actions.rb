@@ -15,8 +15,6 @@ get'/signup' do #if a user navigates to the path "/signup"
     erb(:signup) #render "app/views/signup.erb"
 end
 
-    
-
 post '/signup' do
     
     #grab user input values from params
@@ -61,5 +59,38 @@ end
 get '/logout' do
     session[:user_id] = nil
     redirect to('/')
+end
+
+get '/posts/new' do
+    @post = Post.new
+    erb(:"posts/new")
+end
+
+post '/posts' do
+    photo_url = params[:photo_url]
+    
+    if current_user
+    
+        #instantiate new post
+        @post = Post.new({ photo_url: photo_url, user_id: current_user.id })
+    
+        #if @post validates, save
+        if @post.save
+            redirect(to('/'))
+        else
+            #if it doesn't validate, print error messages from new.erb
+            erb(:"posts/new")
+            
+        end
+    else 
+        redirect(to('/posts/new'))
+        
+    end
+    
+end
+
+get '/posts/:id' do
+    @post = Post.find(params[:id]) #find the post with the ID from the URL
+    erb(:"posts/show") #render app/views/posts/show.erb
 end
 
