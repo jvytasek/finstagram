@@ -8,7 +8,7 @@
         <img src="<%= post.photo_url %>" alt="post from <%= post.user.username %>">
     </a>
     <div class="actions">
-        <%= post.like_count %> likes
+        <%= erb(:"shared/likes", { locals: { post: post}}) %>
         <span class="comment-count"> <%= post.comment_count %> comment </span>
     </div>
     <ul class="comments">
